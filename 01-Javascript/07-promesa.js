@@ -59,9 +59,11 @@ nuevaPromesa(nombre)
         }
     );
 
+
 appendFile(nombre)
     .then(
         (contenido) => {
+            return nuevaPromesaEscritura(nombre, contenido + '\nHola amigos');
             console.log(contenido);
         }
     )
