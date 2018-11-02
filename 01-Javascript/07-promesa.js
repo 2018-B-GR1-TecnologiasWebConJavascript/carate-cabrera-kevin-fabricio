@@ -1,6 +1,6 @@
 // 07-promesas.js
 const fs = require('fs');
-const nombre = '07-ejemplo.txt';
+const nombre = '07-ejemplo2.txt';
 const nuevaPromesa = (nombreArchivo) => {
     return new Promise(
         (resolve, reject) => {
@@ -60,10 +60,30 @@ nuevaPromesa(nombre)
     );
 
 
-appendFile(nombre)
+const appendFile = (nombreArchivo) => {
+    return new Promise(
+        (resolve, reject) => {
+            fs.readFile(
+                nombreArchivo,
+                'utf-8',
+                (err, contenidoLeidoDelArchivo) => {
+                    if (err) {
+                        reject(err);
+                    } else {
+                        resolve(contenidoLeidoDelArchivo);
+                        console.log('si')
+                    }
+
+                }
+            )
+        }
+    )
+};
+
+appendFile('08-ejemploDeber.txt')
     .then(
         (contenido) => {
-            return nuevaPromesaEscritura(nombre, contenido + '\nHola amigos');
+            return nuevaPromesaEscritura('08-ejemploDeber.txt', contenido + '\nHola amigos');
             console.log(contenido);
         }
     )

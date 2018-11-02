@@ -54,4 +54,80 @@ appendFile(
         } else {
             console.log(contenido);
         }
-    })
+    });
+
+// ['A','B','C']
+
+// 0-A.txt    'A'
+// 1-B.txt    'B'
+// 2-C.txt    'C'
+
+const respuesta = {
+    nombreArchivo: '',
+    contenidoArchivo: '',
+    error: '',
+};
+
+
+function ejercicio(arregloStrings, callback) {
+
+    const respuestas = [];
+
+    arregloStrings
+        .forEach(
+            (string, indice) => {
+                const nombreArchivo = `${indice}-${string}.txt`;
+                const contenido = string;
+                fs.writeFile(
+                    nombreArchivo,
+                    contenido,
+                    (err) => {
+                        const respuesta = {
+                            nombreArchivo: nombreArchivo,
+                            contenidoArchivo: contenido,
+                            error: err,
+                        };
+                        respuestas.push(respuesta);
+
+                        const estaCompletoElArreglo = respuestas.length === arregloStrings.length;
+
+                        if (estaCompletoElArreglo) {
+                            callback(respuestas);
+                        }
+
+                    }
+                );
+            }
+        )
+
+    /*
+        // SCOPES
+        for (let i = 0; i < arregloStrings.length; i++) {
+            fs.writeFile(
+                `${i}-${arregloStrings[i]}.txt`,
+                arregloStrings[i],
+                (err)=>{
+                    const respuesta = {
+                        nombreArchivo: `${i}-${arregloStrings[i]}.txt`,
+                        contenidoArchivo: arregloStrings[i],
+                        error: err,
+                    };
+                    respuestas.push(respuesta);
+                    const estaCompletoElArreglo = respuestas.length === arregloStrings.length;
+                    if (estaCompletoElArreglo) {
+                        callback(respuestas);
+                    }
+                }
+            );
+        }
+    */
+
+}
+
+
+ejercicio(
+    ['A', 'B', 'C'],
+    (respuestaEjercicio) => {
+        console.log(respuestaEjercicio);
+    }
+);
