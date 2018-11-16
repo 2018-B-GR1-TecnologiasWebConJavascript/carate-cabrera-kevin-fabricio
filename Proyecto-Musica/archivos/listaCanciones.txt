@@ -1,0 +1,10 @@
+{"idCancion":"1","nombre":"Hotel California - Eagles"}
+{"idCancion":"2","nombre":"Nothing Else Matters - Metallica"}
+{"idCancion":"3","nombre":"The Unforgiven - Metallica"}
+{"idCancion":"4","nombre":"Back in Black - AC-DC"}
+{"idCancion":"5","nombre":"Thunderstruck - AC-DC"}
+{"idCancion":"6","nombre":"Dont Cry - GnR"}
+{"idCancion":"7","nombre":"Patience - GnR"}
+{"idCancion":"8","nombre":"November Rain - GnR"}
+{"idCancion":"9","nombre":"Civil War - GnR"}
+{"idCancion":"10","nombre":"Wild Child - Wasp"}

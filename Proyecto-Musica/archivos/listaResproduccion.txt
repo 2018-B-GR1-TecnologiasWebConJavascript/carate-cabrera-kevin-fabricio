@@ -1,0 +1,6 @@
+{"idUser":"2","cancion":"Hotel California - Eagles"}
+{"idUser":"2","cancion":"Back in Black - AC-DC"}
+{"idUser":"2","cancion":"Patience - GnR"}
+{"idUser":"1","cancion":"Patience - GnR"}
+{"idUser":"1","cancion":"Civil War - GnR"}
+{"idUser":"2","cancion":"Nothing Else Matters - Metallica"}

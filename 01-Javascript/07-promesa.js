@@ -1,6 +1,7 @@
 // 07-promesas.js
 const fs = require('fs');
 const nombre = '07-ejemplo2.txt';
+/*
 const nuevaPromesa = (nombreArchivo) => {
     return new Promise(
         (resolve, reject) => {
@@ -21,7 +22,7 @@ const nuevaPromesa = (nombreArchivo) => {
         }
     )
 };
-
+*/
 const nuevaPromesaEscritura = (nombreArchivo, contenidoArchivo) => {
     return new Promise(
         (resolve, reject) => {
@@ -41,7 +42,7 @@ const nuevaPromesaEscritura = (nombreArchivo, contenidoArchivo) => {
     )
 };
 
-nuevaPromesa(nombre)
+/*nuevaPromesa(nombre)
     .then(
         (contenido) => {
             console.log(contenido);
@@ -58,7 +59,7 @@ nuevaPromesa(nombre)
             console.log('Catch',error);
         }
     );
-
+*/
 
 const appendFile = (nombreArchivo) => {
     return new Promise(
@@ -80,6 +81,7 @@ const appendFile = (nombreArchivo) => {
     )
 };
 
+
 appendFile('08-ejemploDeber.txt')
     .then(
         (contenido) => {
@@ -92,4 +94,3 @@ appendFile('08-ejemploDeber.txt')
             console.log(error);
         }
     )
-

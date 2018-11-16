@@ -1,0 +1,2 @@
+{"id":"1","nick":"kevinfcc","pass":"10"}
+{"id":"2","nick":"kfc","pass":"10"}
