@@ -104,8 +104,8 @@ function main(){
                             var id = arreglo.filter(value =>{
                                 return (JSON.parse(value)["nick"] === respuestas.nick && JSON.parse(value)["pass"] === respuestas.pass)
                             })
-                            if(id.length != 0 && JSON.parse(id)["id"] != 0){
-                                llamadaMenuCancion(JSON.parse(id)["id"]);
+                            if(id.length != 0 && JSON.parse("id")["id"] != 0){
+                                llamadaMenuCancion(JSON.parse("id")["id"]);
                             }
                             else {
                                 console.log("usuario no encontrado");
@@ -196,7 +196,7 @@ function llamadaMenuCancion(idUsuario:number){
                                     val += valor+"\n";
                                 })
                                 console.log(val)
-                                //rxjs.from(service.escribirarchivo("archivos/listaResproduccion.txt", val));
+                                rxjs.from(service.escribirarchivo("archivos/listaResproduccion.txt", val));
                                 //llamadaMenuCancion(idUsuario);
                             })
 
