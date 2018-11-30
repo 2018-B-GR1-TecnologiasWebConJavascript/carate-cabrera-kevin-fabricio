@@ -1,20 +1,20 @@
 // 01-tipos-variables.ts
-let edad = 23;
+var edad = 23;
 edad = 23;
 edad = 'Kevin';
-let variableLoca = '';
+var variableLoca = '';
 variableLoca = false;
-let nombre = 'Kevin';
+var nombre = 'Kevin';
 // duck typing ->
-let casado = false;
+var casado = false;
 casado = true;
 casado = null;
 casado = undefined;
-let kevin = {
+var kevin = {
     nombre: 'Kevin',
     apellido: 'Carate'
 };
-let fechaNacimiento = new Date();
+var fechaNacimiento = new Date();
 /*
 let promesa:Promise<number> = () => {
     return new Promise(
@@ -24,32 +24,39 @@ let promesa:Promise<number> = () => {
         );
 }
 */
-const numeros = [1, 2, 3, 4];
+var numeros = [1, 2, 3, 4];
 /****** TIPAR FUNCIONES *******/
 function saludar(nombre, //Requeridos
-apellido, //Opcionales
-...otrosNombres) {
+apellido) {
+    var otrosNombres = [];
+    for (var _i = 2; _i < arguments.length; _i++) {
+        otrosNombres[_i - 2] = arguments[_i];
+    }
     return '';
 }
-let respuestaSaludar = saludar('Kevin', 'Carate', '', '', '');
+var respuestaSaludar = saludar('Kevin', 'Carate', '', '', '');
 respuestaSaludar = 1;
 /*******  Funciones Anonimas *******/
-const saludo = (nombre) => {
+var saludo = function (nombre) {
     return 1;
 };
 /***** Clases e Interfaces *****/
-class Usuario {
-    constructor() {
+var Usuario = /** @class */ (function () {
+    function Usuario() {
     }
-}
-const kevin = new Usuario(); // Instanciar
-class UsuarioDummy {
-}
-const kevin = {
+    return Usuario;
+}());
+var kevin = new Usuario(); // Instanciar
+var UsuarioDummy = /** @class */ (function () {
+    function UsuarioDummy() {
+    }
+    return UsuarioDummy;
+}());
+var kevin = {
     nombre: 'Kevin',
     apellido: 'Carate'
 };
-const kevin = {
+var kevin = {
     nombre: 'Kevin',
     apellido: 'Carate'
 };
