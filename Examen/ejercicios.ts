@@ -77,7 +77,7 @@ respuestas.forEach((value) => {
             (valor) =>{
                 ejercicio5.nombre.push(valor)
                 if(value2.abilities.name === valor){
-                    ejercicio4.pokemons.push(value.id)
+                    ejercicio5.pokemons.push(value.id)
                 }
             }
         )

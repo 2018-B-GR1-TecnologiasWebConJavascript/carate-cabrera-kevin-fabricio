@@ -197,6 +197,11 @@ function  main() {
             preguntarDatosMusica(),
         )
         .subscribe(
+            data  => {},
+            eror =>{},
+            () => {
+                main()
+            }
         )
 }
 

@@ -152,7 +152,9 @@ function main() {
     console.log('Inicio Programa');
     inicializarBase()
         .pipe(preguntarOpcionesMenu(), preguntarDatosMusica())
-        .subscribe();
+        .subscribe(function (data) { }, function (eror) { }, function () {
+        main();
+    });
 }
 /************** OPCIONES MENU PRINCIPAL **************/
 function preguntarOpcionesMenu() {
