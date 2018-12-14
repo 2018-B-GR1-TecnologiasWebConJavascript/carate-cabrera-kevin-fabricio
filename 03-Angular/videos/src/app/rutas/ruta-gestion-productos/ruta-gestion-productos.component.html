@@ -1,3 +1,62 @@
-<p>
-  ruta-gestion-productos works!
-</p>
+<h3>GESTION PRODUCTOS</h3>
+<p>Gestione sus productos</p>
+
+<h5>Ingreso Productos</h5>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-3"><label>Id</label></div>
+          <div class="col-sm-5">
+            <input id="id2" type="text"   placeholder="Ingrese id">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-3"><label>Nombre</label></div>
+          <div class="col-sm-3">
+            <input id="name" type="text"  placeholder="Ingrese nombre producto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<button (click)="ingresarProducto()">Agregar</button>
+<br><br>
+
+
+<h5>Actualizar Nombre Producto</h5>
+<div class="row">
+  <div class="col-sm-2">
+    <label>Nombre</label>
+  </div>
+  <div class="col-sm-2">
+    <input id="actualizarNombre" type="text"  placeholder="Ingrese nombre actualizar">
+  </div>
+</div>
+<br><br>
+
+<table>
+  <!-- tr -> table row -->
+  <tr>
+    <!-- th -> table header -->
+    <th>Identificador</th>
+    <th>Nombre</th>
+    <th>Accion</th>
+  </tr>
+  <tr *ngFor="let producto of productos">
+    <!-- td -> table detail -->
+    <!-- INTERPOLACION -->
+    <td>{{producto.id}}</td>
+    <td>{{producto.nombre}}</td>
+    <td>
+      <button (click)="imprimir(producto)">Eliminar</button>
+      <button (click)="actualizar(producto)">Actualizar</button>
+    </td>
+  </tr>
+</table>

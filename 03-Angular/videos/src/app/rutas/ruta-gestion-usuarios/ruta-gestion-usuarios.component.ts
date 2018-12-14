@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RutaGestionUsuariosComponent implements OnInit {
 
+
   usuarios: Usuario[] = [
     {
       id:1,
@@ -35,6 +36,26 @@ export class RutaGestionUsuariosComponent implements OnInit {
       }
     );
     this.usuarios.splice(indiceUsuarioAEliminar, 1);
+  }
+
+  actualizar(usuario: Usuario){
+    const  indice = this.usuarios.findIndex(
+      (usuarioABuscar) =>{
+        return usuarioABuscar.id === usuario.id;
+      }
+    );
+
+    this.usuarios[indice].nombre = document.getElementById("actualizarNombre").value;
+  }
+
+  ingresarUsuario(){
+
+    const usuario: Usuario = {
+      id: document.getElementById("id2").value,
+      nombre: document.getElementById("name").value
+    }
+
+    this.usuarios.push(usuario);
   }
 
 }

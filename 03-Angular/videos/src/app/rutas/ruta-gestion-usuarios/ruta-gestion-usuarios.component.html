@@ -1,6 +1,46 @@
 <h3>GESTION USUARIOS</h3>
 <p>Gestione sus usuarios</p>
 
+<h5>Ingreso Usuarios</h5>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-3"><label>Id</label></div>
+          <div class="col-sm-5">
+            <input id="id2" type="text"   placeholder="Ingrese id">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-3"><label>Nombre</label></div>
+          <div class="col-sm-3">
+            <input id="name" type="text"  placeholder="Ingrese nombre">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<button (click)="ingresarUsuario()">Agregar</button>
+<br><br>
+
+
+<h5>Actualizar Nombre Usuario</h5>
+<div class="row">
+  <div class="col-sm-2">
+    <label>Nombre</label>
+  </div>
+  <div class="col-sm-2">
+    <input id="actualizarNombre" type="text"  placeholder="Ingrese nombre actualizar">
+  </div>
+</div>
+<br><br>
+
 <table>
   <!-- tr -> table row -->
   <tr>
@@ -16,6 +56,7 @@
     <td>{{usuario.nombre}}</td>
     <td>
       <button (click)="imprimir(usuario)">Eliminar {{hola()}}</button>
+      <button (click)="actualizar(usuario)">Actualizar</button>
     </td>
   </tr>
 </table>
