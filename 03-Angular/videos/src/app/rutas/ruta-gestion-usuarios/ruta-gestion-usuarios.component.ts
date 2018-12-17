@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class RutaGestionUsuariosComponent implements OnInit {
 
 
+  users: User[] = [];
+
+
   usuarios: Usuario[] = [
     {
       id:1,
@@ -19,9 +22,14 @@ export class RutaGestionUsuariosComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(private readonly _userService: UserServiceService) { }
 
   ngOnInit() {
+    this.users = this._userService.users;
+  }
+
+  delete(user: User) {
+    this._userService.delete(user.id);
   }
 
   hola(){

@@ -60,3 +60,29 @@
     </td>
   </tr>
 </table>
+
+
+<h3>Users Management</h3>
+
+<p>Manage your users.</p>
+
+<table class="table table-striped table-dark">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{ user.id }}</td>
+    <td>{{ user.name }}</td>
+    <td>
+      <button class="btn btn-danger" (click)="delete(user)">Delete</button>
+      <a [routerLink]="['/menu', 'user-detail', user.id]">
+        <button class="btn btn-primary ml-3">Details</button>
+      </a>
+    </td>
+  </tr>
+  </tbody>
+</table>
