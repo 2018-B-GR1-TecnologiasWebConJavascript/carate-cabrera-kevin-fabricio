@@ -7,9 +7,22 @@
 
 module.exports = {
 
-  hola:(peticion, respuesta) => {
-    return respuesta.ok['ok'];
-  }
+  holaMundo: function (peticion, respuesta) {
+    return respuesta.ok('ok');
+  },
+  buscarPorNombre: async function (req, res) {
+    // TENER ACCESO A TODOS LOS MODELOS
+    // Body Query
+    const parametros = req.allParams();
+
+    var nombreCac = await Raza.find({
+      nombre: {'startsWith': parametros.nombre}
+    });
+
+    return res.ok(nombreCac);
+
+  },
+
 
 };
 

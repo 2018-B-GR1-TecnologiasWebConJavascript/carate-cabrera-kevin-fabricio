@@ -20,7 +20,9 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
-  'GET /hola' : 'RazaController.hola',
+  'GET /Raza/holaMundo': 'RazaController.holaMundo',
+
+  'POST /Raza/buscarPorNombre': 'RazaController.buscarPorNombre',
 
 
   /***************************************************************************
