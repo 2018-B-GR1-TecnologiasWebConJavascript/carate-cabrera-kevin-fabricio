@@ -7,6 +7,7 @@ import {RutaPerfilComponent} from "./rutas/ruta-perfil/ruta-perfil.component";
 import {Ruta404Component} from "./rutas/ruta404/ruta404.component";
 import {RutaGestionUsuariosComponent} from "./rutas/ruta-gestion-usuarios/ruta-gestion-usuarios.component";
 import {RutaGestionProductosComponent} from "./rutas/ruta-gestion-productos/ruta-gestion-productos.component";
+import {RutaCrearRazaComponent} from "./rutas/ruta-crear-raza/ruta-crear-raza.component";
 
 const routes: Routes = [
   {
@@ -37,7 +38,11 @@ const routes: Routes = [
       {
         path: 'gestion-productos',
         component: RutaGestionProductosComponent
-      }
+      },
+      {
+        path: 'crear-raza',
+        component: RutaCrearRazaComponent
+      },
     ]
   },
   {
