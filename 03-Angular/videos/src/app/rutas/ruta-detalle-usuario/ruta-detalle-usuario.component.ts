@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {UsuarioServiceService} from '../../services/usuario-service.service';
+import {ActivatedRoute, Route} from '@angular/router';
+import {User} from '../../services/usuario-service.service';
 
 @Component({
   selector: 'app-ruta-detalle-usuario',
@@ -9,7 +12,7 @@ export class RutaDetalleUsuarioComponent implements OnInit {
 
   user:User;
   constructor(
-    private readonly _userService: UserServiceService,
+    private readonly _userService: UsuarioServiceService,
     private readonly _route: ActivatedRoute
   ) { }
 

@@ -23,7 +23,7 @@ export class RutaGestionProductosComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  /*
   imprimir(producto: Producto){
     console.log('Imprimir', producto);
     const  indiceproductoAEliminar = this.productos.findIndex(
@@ -53,6 +53,7 @@ export class RutaGestionProductosComponent implements OnInit {
 
     this.productos.push(producto);
   }
+  */
 }
 
 interface Producto {

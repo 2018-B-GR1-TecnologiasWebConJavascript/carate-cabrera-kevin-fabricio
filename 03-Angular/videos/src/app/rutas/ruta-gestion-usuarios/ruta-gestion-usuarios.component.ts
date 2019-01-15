@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {RazaRestService} from "../../services/Rest/raza-rest.service";
 import {Raza} from "../../interfaces/raza";
+import {User} from '../../services/usuario-service.service';
 
 @Component({
   selector: 'app-ruta-gestion-usuarios',
@@ -11,9 +12,9 @@ export class RutaGestionUsuariosComponent implements OnInit {
 
 
   users: User[] = [];
+  usuarios = [];
 
-
-  usuarios: Usuario[] = [
+  /*usuarios: Usuario[] = [
     {
       id:1,
       nombre:'Kevin'
@@ -22,16 +23,17 @@ export class RutaGestionUsuariosComponent implements OnInit {
       id:2,
       nombre:'Fabricio'
     }
-  ]
+  ]*/
 
   constructor(private readonly _razaRestService: RazaRestService) { }
 
   ngOnInit() {
     //this.users = this._userService.users;
-    const razas = this._razaRestService.findAll();
-    razas.subscribe(
+    const razas$ = this._razaRestService.findAll();
+    razas$.subscribe(
       (razas:Raza[])=>{
           console.log(razas);
+          this.usuarios = razas;
       },
       (error) =>{
         console.error('Error', error)
@@ -59,6 +61,7 @@ export class RutaGestionUsuariosComponent implements OnInit {
     return 'Hola'
   }
 
+  /*
   imprimir(usuario: Usuario){
     console.log('Imprimir', usuario);
     const  indiceUsuarioAEliminar = this.usuarios.findIndex(
@@ -88,7 +91,7 @@ export class RutaGestionUsuariosComponent implements OnInit {
 
     this.usuarios.push(usuario);
   }
-
+  */
 }
 
 interface Usuario {

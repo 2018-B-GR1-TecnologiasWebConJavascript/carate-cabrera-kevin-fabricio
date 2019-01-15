@@ -1,6 +1,6 @@
 export interface Raza{
-  id:number;
+  id?:number;
   nombre:string;
-  createdAt:string;
-  updateAt:string;
+  createdAt?:string;
+  updateAt?:string;
 }

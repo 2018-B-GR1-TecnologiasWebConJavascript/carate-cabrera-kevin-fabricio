@@ -1,3 +1,9 @@
-<p>
-  ruta-inicio works!
-</p>
+<h1>Peliculas</h1>
+<div ngFor="let imagen of imagenes">
+  <app-imagen-pelicula
+    [nombre]="imagen.nombrePelicula"
+    [titulo]="imagen.nombrePelicula"
+    [anio]="imagen.anio"
+  >
+  </app-imagen-pelicula>
+</div>
