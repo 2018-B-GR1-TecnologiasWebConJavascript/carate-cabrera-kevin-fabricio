@@ -1,9 +1,10 @@
 <h1>Peliculas</h1>
-<div ngFor="let imagen of imagenes">
+<div *ngFor="let imagen of imagenes">
   <app-imagen-pelicula
-    [nombre]="imagen.nombrePelicula"
+    [nombre]="imagen.nombreImagen"
     [titulo]="imagen.nombrePelicula"
     [anio]="imagen.anio"
+    (dioClick)="agregarCarrito($event)"
   >
   </app-imagen-pelicula>
 </div>

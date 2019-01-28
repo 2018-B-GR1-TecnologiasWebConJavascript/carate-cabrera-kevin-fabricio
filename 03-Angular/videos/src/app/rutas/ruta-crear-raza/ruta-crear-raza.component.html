@@ -1,3 +1,15 @@
+<h2>Crear raza</h2>
+
+<p>Cree razas de animales</p>
+
+<app-formulario-raza
+  [nombreBoton]="'Crear'"
+  (formularioValido)="crearRaza($event)"
+>
+</app-formulario-raza>
+
+
+
 <!--
 <h2>Crear Raza</h2>
 <p>Cree razas de animales</p>
@@ -8,13 +20,13 @@
   </div>
   <button>Crear Raza</button>
 </form>
--->
+
 
 <h2>Crear raza</h2>
 
 <p>Cree razas de animales</p>
 
-<!-- novalidate -> Navegador no validez por fa-->
+<!-- novalidate -> Navegador no validez por fa
 <form #razaFormulario="ngForm"
       novalidate
       (submit)="crearRaza(razaFormulario)">
@@ -76,7 +88,7 @@
     <!-- Correos -> email -->
     <!-- Numeros -> min y max -->
     <!-- Longitud -> minlenght maxlenght -->
-    <!-- Expresiones Regulares -> pattern -->
+    <!-- Expresiones Regulares -> pattern
 
     <input id="nombre"
            name="nombre"
@@ -110,7 +122,7 @@
     <!-- Banana Box Model -->
     <!-- Two way data binding -->
     <!-- Componente -> HTML -->
-    <!-- < -->
+    <!-- <
     <input id="apellido"
            name="apellido"
            type="text"

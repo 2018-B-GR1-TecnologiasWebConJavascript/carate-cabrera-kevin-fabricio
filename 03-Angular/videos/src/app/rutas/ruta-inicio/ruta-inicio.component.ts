@@ -35,6 +35,9 @@ export class RutaInicioComponent implements OnInit {
   ngOnInit() {
   }
 
+  agregarCarrito(pelicula){
+   console.log("agregando al carrito",pelicula)
+  }
 }
 
 export interface Imagenes {

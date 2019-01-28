@@ -23,6 +23,22 @@ module.exports = {
 
   },
 
+  login: async function (req, res){
+    const parametros = req.allParams();
+
+    var usuarioLogueado = await Raza.find({
+      username: parametros.username,
+      password: parametros.password,
+    })
+
+    if(usuarioLogueado){
+      return res.ok(usuarioLogueado);
+    }else{
+      return res.badRequest({mensaje:'Usuario invalido'});
+    }
+
+  }
+
 
 };
 
